@@ -62,12 +62,12 @@
 
 ### 2. Strings, Parsing & Stacks — Google loves these; on-theme for this role
 
-- [ ] ⭐📄🎯 Decode String (M) — `3[abc]` → `abcabcabc`; **the first example in Google's doc**
+- [x] ⭐📄🎯 Decode String (M) — `3[abc]` → `abcabcabc`; **the first example in Google's doc**
 - [ ] 🎯 Basic Calculator II (M) — expression evaluation
 - [ ] 🎯 Basic Calculator (H) — with parentheses
 - [ ] Valid Parentheses (E)
 - [ ] Minimum Remove to Make Valid Parentheses (M)
-- [ ] ⭐ Longest Substring Without Repeating Characters (M) — sliding window
+- [x] ⭐ Longest Substring Without Repeating Characters (M) — sliding window
 - [ ] 📄 Longest Word in Dictionary through Deleting (M) — subsequence; **in Google's doc**
 - [ ] Group Anagrams (M)
 - [ ] Valid Anagram (E)
@@ -77,7 +77,7 @@
 ### 3. Arrays / Two Pointers / Sliding Window / Intervals
 
 - [ ] Two Sum (E)
-- [ ] ⭐ 3Sum (M)
+- [x] ⭐ 3Sum (M)
 - [ ] Container With Most Water (M)
 - [ ] Trapping Rain Water (H)
 - [ ] ⭐ Product of Array Except Self (M)
