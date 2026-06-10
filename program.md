@@ -83,7 +83,7 @@
 - [x] ⭐ Product of Array Except Self (M)
 - [ ] Maximum Subarray (M) — Kadane
 - [x] ⭐ Subarray Sum Equals K (M) — prefix-sum + hashmap
-- [ ] ⭐ Merge Intervals (M)
+- [x] ⭐ Merge Intervals (M)
 - [ ] Insert Interval (M)
 - [ ] Non-overlapping Intervals (M) — greedy
 - [ ] ⭐ Meeting Rooms II (M) — heap of end times

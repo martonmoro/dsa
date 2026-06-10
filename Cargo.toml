@@ -45,5 +45,9 @@ path = "examples/arrays_twopointers_slidingwindow_intervals/product_except_self.
 name = "subarray_sum_equals"
 path = "examples/arrays_twopointers_slidingwindow_intervals/subarray_sum_equals.rs"
 
+[[example]]
+name = "merge_intervals"
+path = "examples/arrays_twopointers_slidingwindow_intervals/merge_intervals.rs"
+
 
 
