@@ -46,7 +46,7 @@
 - [x] ⭐ Number of Islands (M)
 - [ ] Flood Fill (E)
 - [ ] Max Area of Island (M)
-- [ ] ⭐ Rotting Oranges (M) — multi-source BFS
+- [x] ⭐ Rotting Oranges (M) — multi-source BFS
 - [ ] 01 Matrix / Walls and Gates (M)
 - [ ] Clone Graph (M)
 - [ ] ⭐🎯 Course Schedule (M) — cycle detection / topo sort = dependency resolution
