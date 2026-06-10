@@ -28,3 +28,14 @@ path = "examples/graph/word_ladder.rs"
 [[example]]
 name = "decode_string"
 path = "examples/strings_parsing_stacks/decode_string.rs"
+
+[[example]]
+name = "longest_substring_without_repeating_characters"
+path = "examples/strings_parsing_stacks/longest_substring_without_repeating_characters.rs"
+
+[[example]]
+name = "3sum"
+path = "examples/arrays_twopointers_slidingwindow_intervals/3sum.rs"
+
+
+
