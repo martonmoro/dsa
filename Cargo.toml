@@ -41,5 +41,9 @@ path = "examples/arrays_twopointers_slidingwindow_intervals/3sum.rs"
 name = "product_except_self"
 path = "examples/arrays_twopointers_slidingwindow_intervals/product_except_self.rs"
 
+[[example]]
+name = "subarray_sum_equals"
+path = "examples/arrays_twopointers_slidingwindow_intervals/subarray_sum_equals.rs"
+
 
 

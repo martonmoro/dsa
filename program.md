@@ -82,7 +82,7 @@
 - [ ] Trapping Rain Water (H)
 - [x] ⭐ Product of Array Except Self (M)
 - [ ] Maximum Subarray (M) — Kadane
-- [ ] ⭐ Subarray Sum Equals K (M) — prefix-sum + hashmap
+- [x] ⭐ Subarray Sum Equals K (M) — prefix-sum + hashmap
 - [ ] ⭐ Merge Intervals (M)
 - [ ] Insert Interval (M)
 - [ ] Non-overlapping Intervals (M) — greedy
