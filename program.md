@@ -53,7 +53,7 @@
 - [ ] 🎯 Course Schedule II (M) — emit a topological order
 - [ ] 🎯 Alien Dictionary (H) — topo sort + parsing (very on-theme)
 - [ ] Pacific Atlantic Water Flow (M)
-- [ ] ⭐ Word Ladder (H) — BFS shortest path
+- [x] ⭐ Word Ladder (H) — BFS shortest path
 - [ ] Number of Provinces (M) — Union-Find
 - [ ] Redundant Connection (M) — Union-Find
 - [ ] Graph Valid Tree (M)
