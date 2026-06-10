@@ -4,3 +4,11 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+
+[[example]]
+name = "number_of_islands"
+path = "examples/graph/number_of_islands.rs"
+
+[[example]]
+name = "rotting_oranges"
+path = "examples/graph/rotting_oranges.rs"

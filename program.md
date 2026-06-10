@@ -43,7 +43,7 @@
 
 ### 1. Graphs & Grids — highest frequency at Google
 
-- [ ] ⭐ Number of Islands (M)
+- [x] ⭐ Number of Islands (M)
 - [ ] Flood Fill (E)
 - [ ] Max Area of Island (M)
 - [ ] ⭐ Rotting Oranges (M) — multi-source BFS
