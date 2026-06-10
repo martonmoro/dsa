@@ -49,7 +49,7 @@
 - [x] ⭐ Rotting Oranges (M) — multi-source BFS
 - [ ] 01 Matrix / Walls and Gates (M)
 - [ ] Clone Graph (M)
-- [ ] ⭐🎯 Course Schedule (M) — cycle detection / topo sort = dependency resolution
+- [x] ⭐🎯 Course Schedule (M) — cycle detection / topo sort = dependency resolution
 - [ ] 🎯 Course Schedule II (M) — emit a topological order
 - [ ] 🎯 Alien Dictionary (H) — topo sort + parsing (very on-theme)
 - [ ] Pacific Atlantic Water Flow (M)

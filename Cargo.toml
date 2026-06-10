@@ -12,3 +12,15 @@ path = "examples/graph/number_of_islands.rs"
 [[example]]
 name = "rotting_oranges"
 path = "examples/graph/rotting_oranges.rs"
+
+[[example]]
+name = "course_schedule_topo"
+path = "examples/graph/course_schedule_topo.rs"
+
+[[example]]
+name = "course_schedule_dfs"
+path = "examples/graph/course_schedule_dfs.rs"
+
+[[example]]
+name = "word_ladder"
+path = "examples/graph/word_ladder.rs"
