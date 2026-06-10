@@ -80,7 +80,7 @@
 - [x] ⭐ 3Sum (M)
 - [ ] Container With Most Water (M)
 - [ ] Trapping Rain Water (H)
-- [ ] ⭐ Product of Array Except Self (M)
+- [x] ⭐ Product of Array Except Self (M)
 - [ ] Maximum Subarray (M) — Kadane
 - [ ] ⭐ Subarray Sum Equals K (M) — prefix-sum + hashmap
 - [ ] ⭐ Merge Intervals (M)

@@ -1,0 +1,36 @@
+// Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
+
+// The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
+
+// You must write an algorithm that runs in O(n) time and without using the division operation.
+
+fn product_except_self(nums: Vec<i32>) -> Vec<i32> {
+    if nums.is_empty() {
+        return vec![];
+    }
+
+    let n = nums.len();
+    let mut result = vec![1; n];
+
+    let mut prefix = 1;
+    for i in 0..n {
+        result[i] = prefix;
+        prefix *= nums[i];
+    }
+
+    let mut suffix = 1;
+    for i in (0..n).rev() {
+        result[i] *= suffix;
+        suffix *= nums[i];
+    }
+
+    result
+}
+
+fn main() {
+    let input_1 = vec![1,2,3,4];
+    let input_2 = vec![-1,1,0,-3,3];
+
+    println!("Result 1: {:?}", product_except_self(input_1));
+    println!("Result 2: {:?}", product_except_self(input_2));
+}

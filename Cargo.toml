@@ -37,5 +37,9 @@ path = "examples/strings_parsing_stacks/longest_substring_without_repeating_char
 name = "3sum"
 path = "examples/arrays_twopointers_slidingwindow_intervals/3sum.rs"
 
+[[example]]
+name = "product_except_self"
+path = "examples/arrays_twopointers_slidingwindow_intervals/product_except_self.rs"
+
 
 
