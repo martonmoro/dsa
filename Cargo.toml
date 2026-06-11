@@ -22,8 +22,20 @@ name = "course_schedule_dfs"
 path = "examples/graph/course_schedule_dfs.rs"
 
 [[example]]
+name = "course_schedule_2"
+path = "examples/graph/course_schedule_2.rs"
+
+[[example]]
 name = "word_ladder"
 path = "examples/graph/word_ladder.rs"
+
+[[example]]
+name = "alien_dictionary"
+path = "examples/graph/alien_dictionary.rs"
+
+[[example]]
+name = "evaluate_division"
+path = "examples/graph/evaluate_division.rs"
 
 [[example]]
 name = "decode_string"
