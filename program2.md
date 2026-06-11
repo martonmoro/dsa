@@ -142,7 +142,7 @@ while let Some(&ch) = chars.peek() {
 - [ ] Non-overlapping Intervals (M) — Greedy choices
 - [x] ⭐ **Meeting Rooms II** (M) — Interval sweep/heap tracking
 - [ ] Minimum Window Substring (H)
-- [ ] ⭐ **Sliding Window Maximum** (H) — Monotonic deque execution
+- [x] ⭐ **Sliding Window Maximum** (H) — Monotonic deque execution
 
 ### 4. Trees
 

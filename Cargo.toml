@@ -53,5 +53,9 @@ path = "examples/arrays_twopointers_slidingwindow_intervals/merge_intervals.rs"
 name = "meeting_rooms_2"
 path = "examples/arrays_twopointers_slidingwindow_intervals/meeting_rooms_2.rs"
 
+[[example]]
+name = "sliding_window_maximum"
+path = "examples/arrays_twopointers_slidingwindow_intervals/sliding_window_maximum.rs"
+
 
 
