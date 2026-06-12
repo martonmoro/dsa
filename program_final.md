@@ -10,7 +10,7 @@ Your checked progress folded into the core list. `[x]` = you've already cleared 
 - [x] **Course Schedule II** — topological order; the "emit the sequence" extension of the one above (nearly free now)
 - [x] **Alien Dictionary** — topo sort, harder variant with parsing + cycle detection
 - [x] **Evaluate Division** — weighted-edge graph, DFS with a running product
-- [ ] **Accounts Merge** — Union-Find
+- [x] **Accounts Merge** — Union-Find
 - [ ] **Cheapest Flights Within K Stops** — Dijkstra / bounded Bellman-Ford
 - [x] **Word Ladder** — BFS as shortest transformation
 

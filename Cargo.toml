@@ -38,6 +38,18 @@ name = "evaluate_division"
 path = "examples/graph/evaluate_division.rs"
 
 [[example]]
+name = "accounts_merge"
+path = "examples/graph/accounts_merge.rs"
+
+[[example]]
+name = "cheapest_flights_k_stops"
+path = "examples/graph/cheapest_flights_k_stops.rs"
+
+[[example]]
+name = "network_delay_time"
+path = "examples/graph/network_delay_time.rs"
+
+[[example]]
 name = "decode_string"
 path = "examples/strings_parsing_stacks/decode_string.rs"
 
