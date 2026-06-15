@@ -42,8 +42,12 @@ name = "accounts_merge"
 path = "examples/graph/accounts_merge.rs"
 
 [[example]]
-name = "cheapest_flights_k_stops"
-path = "examples/graph/cheapest_flights_k_stops.rs"
+name = "cheapest_flights_k_stops_dijkstra"
+path = "examples/graph/cheapest_flights_k_stops_dijkstra.rs"
+
+[[example]]
+name = "cheapest_flights_k_stops_bf"
+path = "examples/graph/cheapest_flights_k_stops_bf.rs"
 
 [[example]]
 name = "network_delay_time"
@@ -80,6 +84,10 @@ path = "examples/arrays_twopointers_slidingwindow_intervals/meeting_rooms_2.rs"
 [[example]]
 name = "sliding_window_maximum"
 path = "examples/arrays_twopointers_slidingwindow_intervals/sliding_window_maximum.rs"
+
+[[example]]
+name = "basic_calculator"
+path = "examples/arrays_twopointers_slidingwindow_intervals/basic_calculator.rs"
 
 
 

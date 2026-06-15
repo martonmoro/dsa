@@ -11,7 +11,7 @@ Your checked progress folded into the core list. `[x]` = you've already cleared 
 - [x] **Alien Dictionary** — topo sort, harder variant with parsing + cycle detection
 - [x] **Evaluate Division** — weighted-edge graph, DFS with a running product
 - [x] **Accounts Merge** — Union-Find
-- [ ] **Cheapest Flights Within K Stops** — Dijkstra / bounded Bellman-Ford
+- [x] **Cheapest Flights Within K Stops** — Dijkstra / bounded Bellman-Ford
 - [x] **Word Ladder** — BFS as shortest transformation
 
 ## Parsing / Stack (2)
