@@ -6,10 +6,6 @@ edition = "2024"
 [dependencies]
 
 [[example]]
-name = "number_of_islands"
-path = "examples/graph/number_of_islands.rs"
-
-[[example]]
 name = "rotting_oranges"
 path = "examples/graph/rotting_oranges.rs"
 
@@ -20,10 +16,6 @@ path = "examples/graph/course_schedule_topo.rs"
 [[example]]
 name = "course_schedule_dfs"
 path = "examples/graph/course_schedule_dfs.rs"
-
-[[example]]
-name = "course_schedule_2"
-path = "examples/graph/course_schedule_2.rs"
 
 [[example]]
 name = "word_ladder"
@@ -59,23 +51,19 @@ path = "examples/strings_parsing_stacks/decode_string.rs"
 
 [[example]]
 name = "longest_substring_without_repeating_characters"
-path = "examples/strings_parsing_stacks/longest_substring_without_repeating_characters.rs"
+path = "examples/longest_substring_without_repeating_characters.rs"
 
 [[example]]
 name = "3sum"
-path = "examples/arrays_twopointers_slidingwindow_intervals/3sum.rs"
+path = "examples/3sum.rs"
 
 [[example]]
 name = "product_except_self"
-path = "examples/arrays_twopointers_slidingwindow_intervals/product_except_self.rs"
+path = "examples/product_except_self.rs"
 
 [[example]]
-name = "subarray_sum_equals"
-path = "examples/arrays_twopointers_slidingwindow_intervals/subarray_sum_equals.rs"
-
-[[example]]
-name = "merge_intervals"
-path = "examples/arrays_twopointers_slidingwindow_intervals/merge_intervals.rs"
+name = "subarray_sum_equals_k"
+path = "examples/subarray_sum_equals_k.rs"
 
 [[example]]
 name = "meeting_rooms_2"
@@ -88,6 +76,56 @@ path = "examples/arrays_twopointers_slidingwindow_intervals/sliding_window_maxim
 [[example]]
 name = "basic_calculator"
 path = "examples/arrays_twopointers_slidingwindow_intervals/basic_calculator.rs"
+
+[[example]]
+name = "max_subarray"
+
+[[example]]
+name = "daily_temperatures"
+
+[[example]]
+name = "search_rotated_array"
+
+[[example]]
+name = "koko_eating_bananas"
+
+[[example]]
+name = "reorder_list"
+
+[[example]]
+name = "binary_tree_level_order_traversal"
+
+[[example]]
+name = "validate_bst"
+
+[[example]]
+name = "lca"
+
+[[example]]
+name = "number_of_islands"
+
+[[example]]
+name = "course_schedule_2"
+
+[[example]]
+name = "top_k_frequent"
+
+[[example]]
+name = "merge_intervals"
+
+[[example]]
+name = "subsets"
+
+[[example]]
+name = "coin_change"
+
+[[example]]
+name = "number_of_connected_components"
+
+[[example]]
+name = "testing"
+
+
 
 
 
