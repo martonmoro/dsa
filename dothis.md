@@ -25,14 +25,14 @@ Coin Change ✅
 Edit Distance
 Implement Trie
 Word Ladder
-Meeting Rooms 2
+Meeting Rooms 2 ✅
 
 If extra time
 Number of Connected Components in an Undirected Graph ✅
 Accounts Merge
 Alien Dictionary
 Rotting Oranges
-Network Delay Time
+Network Delay Time ✅
 Cheapest Flights K Stops
 Sliding Window Maximum
 Word Break

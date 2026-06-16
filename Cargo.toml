@@ -42,10 +42,6 @@ name = "cheapest_flights_k_stops_bf"
 path = "examples/graph/cheapest_flights_k_stops_bf.rs"
 
 [[example]]
-name = "network_delay_time"
-path = "examples/graph/network_delay_time.rs"
-
-[[example]]
 name = "decode_string"
 path = "examples/strings_parsing_stacks/decode_string.rs"
 
@@ -64,10 +60,6 @@ path = "examples/product_except_self.rs"
 [[example]]
 name = "subarray_sum_equals_k"
 path = "examples/subarray_sum_equals_k.rs"
-
-[[example]]
-name = "meeting_rooms_2"
-path = "examples/arrays_twopointers_slidingwindow_intervals/meeting_rooms_2.rs"
 
 [[example]]
 name = "sliding_window_maximum"
@@ -121,6 +113,19 @@ name = "coin_change"
 
 [[example]]
 name = "number_of_connected_components"
+
+[[example]]
+name = "edit_distance"
+
+[[example]]
+name = "trie"
+
+
+[[example]]
+name = "network_delay_time"
+
+[[example]]
+name = "meeting_rooms_2"
 
 [[example]]
 name = "testing"
