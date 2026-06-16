@@ -810,7 +810,7 @@ The `dirs` array + bounds-check pattern is the standard way to visit 4-direction
 
 **Complexity:** O(V + E), which for an `m × n` grid is O(m·n).
 
-**Where it shows up:** Number of Islands, Rotting Oranges, Flood Fill, Max Area of Island, Walls and Gates, Surrounded Regions, Word Search (grid + backtracking), Clone Graph (general-graph DFS with an old→new hashmap).
+**Where it shows up:** Number of Islands, Rotting Oranges, Flood Fill, Max Area of Island, Walls and Gates, Surrounded Regions, Word Search (grid + backtracking), Clone Graph (general-graph DFS with an old→new hashmap), Number of Connected Components (general-graph DFS over an adjacency list).
 
 ## 4.10 Topological sort
 
@@ -959,6 +959,8 @@ fn max_sub_array(nums: Vec<i32>) -> i32 {
     best
 }
 ```
+
+(Your practice file solves this with a divide-and-conquer recurrence instead — left half, right half, and the best crossing sum — which is a great way to _talk about_ the three cases, but Kadane's O(n) single pass is the answer to reach for under time pressure. Know both; lead with Kadane.)
 
 **Complexity:** typically O(n) or O(n log n) (if a sort is needed). Space O(1).
 
@@ -1167,7 +1169,7 @@ Covered in 4.8–4.9 — O(V + E). BFS finds shortest paths in _unweighted_ grap
 
 ## Dijkstra's algorithm
 
-Shortest paths from a source in a graph with **non-negative** edge weights, using a min-heap. O((V + E) log V).
+Shortest paths from a source in a graph with **non-negative** edge weights, using a min-heap. O((V + E) log V). This is exactly the engine behind Network Delay Time (the answer is the max over all shortest distances from the source; if any node is unreachable, return −1).
 
 ```rust
 fn dijkstra(adj: &Vec<Vec<(usize, i64)>>, src: usize) -> Vec<i64> {
@@ -1193,7 +1195,7 @@ Know that **Bellman-Ford** (O(V·E)) handles negative edges and detects negative
 
 ## Topological sort & Union-Find
 
-Covered in 4.10 and Part 3 — O(V + E) and near-O(1) per operation respectively.
+Covered in 4.10 and Part 3 — O(V + E) and near-O(1) per operation respectively. Note the two ways to count connected components: **Union-Find** (the natural fit for Number of Provinces, where you union connected city pairs and count distinct roots) and plain **graph DFS/BFS** over an adjacency list (the natural fit for Number of Connected Components, where you sweep nodes and flood each unvisited one). Both are correct on either problem — knowing why you'd pick one is the signal.
 
 ## Floyd's cycle detection (tortoise and hare)
 
@@ -1220,7 +1222,7 @@ When you read a problem, scan for these signals:
 | Grid of connected cells / regions                    | Grid DFS or BFS (flood fill)     |
 | Spreads from many origins at once                    | Multi-source BFS                 |
 | Dependencies / "must come before"                    | Topological sort                 |
-| Connectivity / connected components                  | Union-Find                       |
+| Connectivity / connected components                  | Union-Find or graph DFS          |
 | "Generate/find ALL combinations/permutations"        | Backtracking                     |
 | "K largest/smallest/most frequent," stream median    | Heap                             |
 | "Max/min total," count of ways, optimal substructure | Dynamic programming              |
@@ -1273,17 +1275,62 @@ At L4, _how_ you solve is graded as heavily as _whether_ you solve. Run this loo
 
 ---
 
-# Part 9 — Three-day study sequence
+# Part 9 — Study sequence (likelihood-ranked, topic-interleaved)
 
-If you're using the 21-problem set, this is the order that builds fastest. Warm-ups (~5 min each) unlock the harder problems that follow.
+This sequence drills your 25-file practice set. One file, `testing.rs`, is an exact duplicate of `subarray_sum_equals_k`, so it's dropped — leaving **24 unique problems**.
 
-**Day 1 — arrays, strings, stack, search.** Warm up with Two Sum (hashing) and Valid Parentheses (stack). Then: Longest Substring Without Repeating Characters, 3Sum, Product of Array Except Self, Subarray Sum Equals K, Maximum Subarray, Daily Temperatures, Search in Rotated Sorted Array, Koko Eating Bananas.
+Two rules govern the order:
 
-**Day 2 — linked lists, trees, graphs, heap, intervals.** Warm up with Reverse Linked List. Then: Reorder List, Binary Tree Level Order, Validate BST, Lowest Common Ancestor, Binary Tree Maximum Path Sum, Number of Islands, Course Schedule II.
+1. **Ranked by likelihood** of appearing in a Google L4 round, most likely first. (This is a judgment call weighted toward Google's known lean on graphs, trees, and array/string patterns — treat clusters as roughly interchangeable, not as a precise leaderboard.)
+2. **Interleaved by topic** so that no two consecutive problems share a technique family. You can't coast by guessing "the next one is also BFS" — you have to re-recognize the pattern cold each time, which is the skill that's actually tested.
 
-**Day 3 — heap, backtracking, DP, trie.** Warm up with House Robber (1D DP). Then: Top K Frequent Elements, Merge Intervals, Subsets, Word Search, Coin Change, Edit Distance, Implement Trie.
+The bracketed number is each problem's raw likelihood rank _before_ interleaving, so you can still see the priority.
 
-For each: solve once without help; if stuck past ~30 minutes, read the solution, understand it, and re-solve from scratch the next day. State approach and complexity before coding, every time.
+| #   | Problem (file)                                   | Pattern                     | Likelihood |
+| --- | ------------------------------------------------ | --------------------------- | ---------- |
+| 1   | `number_of_islands`                              | grid flood fill (DFS)       | [1]        |
+| 2   | `course_schedule_2`                              | topological sort            | [2]        |
+| 3   | `lca`                                            | tree recursion (postorder)  | [3]        |
+| 4   | `longest_substring_without_repeating_characters` | sliding window              | [4]        |
+| 5   | `merge_intervals`                                | intervals (sort + sweep)    | [5]        |
+| 6   | `3sum`                                           | two pointers                | [6]        |
+| 7   | `trie`                                           | prefix tree                 | [8]        |
+| 8   | `subarray_sum_equals_k`                          | prefix sum + hashmap        | [7]        |
+| 9   | `top_k_frequent`                                 | heap / bucket sort          | [9]        |
+| 10  | `rotting_oranges`                                | multi-source BFS            | [10]       |
+| 11  | `coin_change`                                    | DP (unbounded knapsack)     | [11]       |
+| 12  | `validate_bst`                                   | tree recursion (bounds)     | [12]       |
+| 13  | `search_rotated_array`                           | binary search               | [13]       |
+| 14  | `network_delay_time`                             | Dijkstra                    | [14]       |
+| 15  | `binary_tree_level_order_traversal`              | tree BFS                    | [15]       |
+| 16  | `koko_eating_bananas`                            | binary search on the answer | [16]       |
+| 17  | `meeting_rooms_2`                                | heap + intervals            | [17]       |
+| 18  | `product_except_self`                            | prefix / suffix products    | [18]       |
+| 19  | `number_of_connected_components`                 | graph DFS                   | [19]       |
+| 20  | `edit_distance`                                  | 2D string DP                | [21]       |
+| 21  | `number_of_provinces`                            | union-find                  | [20]       |
+| 22  | `subsets`                                        | backtracking                | [22]       |
+| 23  | `daily_temperatures`                             | monotonic stack             | [23]       |
+| 24  | `max_subarray`                                   | divide & conquer / Kadane   | [24]       |
+| 25  | `reorder_list`                                   | linked list pointer surgery | [25]       |
+
+(Only four positions deviate from pure likelihood order — `trie`↔`subarray_sum_equals_k` and `edit_distance`↔`number_of_provinces` were swapped to break up adjacent same-family problems — so the sequence stays very close to the underlying priority. The two grid problems sit nine apart, the binary-search pair is split, and no two adjacent items are both tree/graph/grid traversals.)
+
+## Split across three days
+
+Work straight down the list; each day stays interleaved, so you keep re-recognizing patterns within the session too.
+
+- **Day 1 — problems 1–9** (islands, course schedule II, LCA, longest substring, merge intervals, 3Sum, trie, subarray sum = k, top K frequent).
+- **Day 2 — problems 10–17** (rotting oranges, coin change, validate BST, search rotated array, network delay time, level order, Koko, meeting rooms II).
+- **Day 3 — problems 18–25** (product except self, connected components, edit distance, provinces, subsets, daily temperatures, max subarray, reorder list).
+
+## How to drill each problem
+
+For each: solve once without help; if stuck past ~30 minutes, read the solution, understand it, and re-solve from scratch the next day. State approach and complexity before coding, every time — out loud, following the Part 8 script. Because the list is shuffled by topic, force yourself to do the recognition step first ("what signal tells me which pattern this is?") instead of assuming it matches the previous problem.
+
+## Gaps worth filling
+
+Your practice set is graph/tree/array heavy and light in a few areas the patterns sections above cover but your files don't yet drill. If you have spare time, add at least one of each: a **pure backtracking** beyond subsets (Permutations or Combination Sum), a **1D DP warm-up** (House Robber), a **fast/slow linked-list** problem (Reverse Linked List or Linked List Cycle, since `reorder_list` is the only list problem you have), and **Word Search** (grid + backtracking + trie, a very Google-flavored combination). These round out the recognition table in Part 6.
 
 ---
 
