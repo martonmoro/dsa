@@ -29,7 +29,7 @@ fn network_delay_time(times: Vec<Vec<i32>>, n: i32, k: i32) -> i32 {
     // Min-heap (priority queue)
     let mut heap: BinaryHeap<Reverse<(i32, usize)>> = BinaryHeap::new();
     // Start from source node k with cost 0
-    heap.push(Reverse((0, src)));
+    heap.push(Reverse((0, k)));
 
     // Dijkstra
     while let Some(Reverse((cost, node))) = heap.pop() {

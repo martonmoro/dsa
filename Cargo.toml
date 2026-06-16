@@ -6,10 +6,6 @@ edition = "2024"
 [dependencies]
 
 [[example]]
-name = "rotting_oranges"
-path = "examples/graph/rotting_oranges.rs"
-
-[[example]]
 name = "course_schedule_topo"
 path = "examples/graph/course_schedule_topo.rs"
 
@@ -126,6 +122,9 @@ name = "network_delay_time"
 
 [[example]]
 name = "meeting_rooms_2"
+
+[[example]]
+name = "rotting_oranges"
 
 [[example]]
 name = "testing"
