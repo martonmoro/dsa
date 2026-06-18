@@ -33,7 +33,7 @@ fn find_circle_num(is_connected: Vec<Vec<i32>>) -> i32 {
             return;
         }
 
-        // this is where we could use rank to attack one under the other
+        // this is where we could use rank to attach one under the other
         // if rank[px] < rank[py] {
         //     parent[px] = py;
         // } else if rank[px] > rank[py] {

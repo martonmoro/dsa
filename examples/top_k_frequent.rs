@@ -5,18 +5,18 @@ use std::collections::{HashMap, BinaryHeap};
 fn top_k_frequent_heap(nums: Vec<i32>, k: i32) -> Vec<i32> {
     let mut frequency: HashMap<i32, i32> = HashMap::new();
 
-    // Create num -> frequency mapping
+    // Create num -> frequency mapping - O(n)
     for &num in &nums {
         *frequency.entry(num).or_insert(0) += 1;
     }
 
-    // Push them into binary heap
+    // Push them into binary heap - O(nlogn)
     let mut heap = BinaryHeap::new();
     for (num, freq) in frequency {
         heap.push((freq, num));
     }
 
-    // Return first k elements (or full heap)
+    // Return first k elements (or full heap) O(nlog)
     let mut result = Vec::new();
 
     for _ in 0..k {
@@ -30,28 +30,29 @@ fn top_k_frequent_heap(nums: Vec<i32>, k: i32) -> Vec<i32> {
     result
 }
 
-fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {
-    let n = nums.len();
-    let k = k as usize;
-    let mut frequency = HashMap::new();
+fn top_k_frequent_bucket(nums: Vec<i32>, k: i32) -> Vec<i32> {
+    let mut freq = HashMap::new();
 
-    // Count frequency
-    for &num in &nums {
-        *frequency.entry(num).or_insert(0) += 1;
+    // 1. Count frequencies
+    for n in nums {
+        *freq.entry(n).or_insert(0) += 1;
     }
 
-    // Create buckets, indexed by frequency (1..=n)
-    let mut buckets = vec![vec![]; n + 1];
-    for (num, freq) in frequency {
-        buckets[freq].push(num);
+    // 2. Create buckets: index = frequency
+    let mut buckets = vec![Vec::new(); freq.len() + 1];
+
+    for (num, count) in freq {
+        buckets[count].push(num);
     }
 
-    // Collect top k
+    // 3. Collect top k from high frequency to low
     let mut result = Vec::new();
-    for i in (0..buckets.len()).rev() {
-        for num in buckets[i].drain(..) {
+
+    for f in (0..buckets.len()).rev() {
+        for &num in &buckets[f] {
             result.push(num);
-            if result.len() == k {
+
+            if result.len() == k as usize {
                 return result;
             }
         }

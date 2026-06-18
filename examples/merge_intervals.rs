@@ -26,6 +26,22 @@ fn merge(mut intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
     merged
 }
 
+fn merge_shorter(mut intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
+    intervals.sort_by_key(|interval| interval[0]);
+    let mut merged = Vec::new();
+
+    for interval in intervals {
+        match merged.last_mut() {
+            Some(last) if interval[0] <= last[1] => {
+                last[1] = last[1].max(interval[1]);
+            }
+            _ => merged.push(interval);
+        }
+    }
+
+    merged
+}
+
 fn main() {
     let intervals = vec![
     vec![1, 3],

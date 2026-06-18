@@ -1287,10 +1287,10 @@ Two rules govern the order:
 The bracketed number is each problem's raw likelihood rank _before_ interleaving, so you can still see the priority.
 
 | #   | Problem (file)                                   | Pattern                     | Likelihood |
-| --- | ------------------------------------------------ | --------------------------- | ---------- |
-| 1   | `number_of_islands`                              | grid flood fill (DFS)       | [1]        |
-| 2   | `course_schedule_2`                              | topological sort            | [2]        |
-| 3   | `lca`                                            | tree recursion (postorder)  | [3]        |
+| --- | ------------------------------------------------ | --------------------------- | ---------- | --- |
+| 1   | `number_of_islands`                              | grid flood fill (DFS)       | [1]        | ✅  |
+| 2   | `course_schedule_2`                              | topological sort            | [2]        | ✅  |
+| 3   | `lca`                                            | tree recursion (postorder)  | [3]        | ✅  |
 | 4   | `longest_substring_without_repeating_characters` | sliding window              | [4]        |
 | 5   | `merge_intervals`                                | intervals (sort + sweep)    | [5]        |
 | 6   | `3sum`                                           | two pointers                | [6]        |

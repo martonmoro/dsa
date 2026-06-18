@@ -37,6 +37,18 @@ fn max_subarray(nums: &[i32]) -> i32 {
     left.max(right).max(mid)
 }
 
+fn max_subarray_kadane(nums: &[i32]) -> i32 {
+    let mut current = nums[0];
+    let mut best = nums[0];
+
+    for &x in &nums[1..] {
+        current = x.max(current + x);
+        best = best.max(current);
+    }
+
+    best
+}
+
 fn main() {
     let test_cases = vec![
         vec![1],                          // single element
